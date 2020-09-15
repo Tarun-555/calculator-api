@@ -18,6 +18,10 @@ app.use(bodyParser.json())
 // here
 app.use("/",Routes);
 
+app.get("/", (__, res) => {
+	res.status(200).send("Hello world!");
+});
+
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
 
 module.exports = app;
