@@ -1,6 +1,8 @@
 const express = require('express')
 const app = express()
 const bodyParser = require("body-parser");
+const Routes = require("./Routes");
+
 const port = 3000
 app.use(express.urlencoded());
 
@@ -14,7 +16,7 @@ app.use(bodyParser.json())
 // your code goes here
 
 // here
-
+app.use("/",Routes);
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
 
